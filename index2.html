@@ -1,105 +1,52 @@
-</script></div></div>
-
-
-<div id="c8702" class="frame frame-default frame-type-textmedia frame-layout-0 frame-space-before-30"><div class="rahmen"><header><h3 class="">
-				Skript: Alle Spiele eines Vereins als Kreuzspielplan
-			</h3></header><div class="ce-textpic ce-left ce-above"><div class="ce-bodytext"><p>&lt;script&gt;</p><p>var <span style="color:#27ae60">CONFIGNAME</span>={</p><p>&nbsp;&nbsp;&nbsp;&nbsp;wettbewerbe:[<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "<span style="color:#e74c3c">WETTBEWERB1</span>",<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "<span style="color:#e74c3c">WETTBEWERB2</span>",<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "..."</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],</p><p>&nbsp;&nbsp;&nbsp;&nbsp;teams:[<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {id:'<span style="color:#e74c3c">TEAM 1</span>',name:"<span style="color:#27ae60">Männer 1</span>"},<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {id:'<span style="color:#e74c3c">TEAM 2</span>',name:"<span style="color:#27ae60">Männer 2</span>"},<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {id:'...',name:"<span style="color:#27ae60">Frauen 1</span>"}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</p><p>};</p><p>&lt;/script&gt;</p><p>&nbsp;</p><p>&lt;div class="vapi" data-typ="kreuz"&nbsp; data-config="<span style="color:#27ae60">CONFIGNAME</span>" &gt;&lt;/div&gt;</p><p>&nbsp;</p><h4>Beispiel</h4></div></div></div></div>
-
-
-<div id="c8655" class="frame frame-default frame-type-html frame-layout-0 frame-space-before-35"><div class="rahmen"><style>
-
-.vapiclass table {
-      border-collapse: collapse;
-      width: 90%;
-}
-
-//.vapicalss table, th, td {
-    border: 1px solid black;
-}
-  
-.vapiclass td {
-    text-align: center!important;
-}
-.vapiclass th {
-    text-align: center!important;
-}
-
-.vapiclass td.left {text-align: center!important;}
-.vapiclass th.left {text-align: center!important;}
-
-.vapiclass td.center {text-align: center!important;}
-.vapiclass th.center {text-align: center!important;}
-
-</style><div class="vapi vapiclass" data-config="config2" data-typ="kreuz"></div><script>
-var config2={
-	wettbewerbe:[
-		"7cb2716e-f25b-4a51-964c-b224679573d2",
-		"16f32a92-a843-44d4-9b5d-9ffd9eee10fb",
-		"5f454525-b58b-4600-b7c8-05c81746a3a8"
-		],
-	teams:[
-		{id:'31b4be90-200c-4c4a-bd00-a707ca8e9867',name:"Männer 1"},
-		{id:'b499325c-9854-4d0d-9825-e6622e2e75c5',name:"Männer 2"},
-		{id:'742ebd80-7db7-4648-9536-0a96571b9521',name:"Frauen 1"}
-		],
-	showzeit: true
-};
-</script></div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-<script src="https://api.volleyball-bayern.de/jsi/volley.js.php?key=de10422c-af10-4bb2-9713-2b3128a235b4"></script>
-var CONFIGNAME={
-
-     allespiele: true, //zeigt alle Spiele der Saison an - ohne diese Zeile werden die aktuellen Spiele angezeigt //
-
-    wettbewerbe:[
-
-        "b33803b9-4470-44fb-9730-eb084ff0dc34",
-        "9e1415b4-76f3-4895-84e9-3a03720c81fa",
-        "5633a4f9-2d94-41ae-8c41-b50a68cbd1cf",
-        "e20038b0-5169-4413-8f79-10785ab8ef7e",
-        "91ad94bf-5fef-43c2-b1b2-c6fc416b1664",
-        "1c313884-b146-4323-84bf-075b0b5650d6",
-        "4c2e6195-1ea3-421c-8bca-8768ca54f4e2",
-        "adb0ec28-21d1-4cf8-a8dc-c50a1d557831",
-        
-        ],
-
-    teams:[
-        {id:'79006f1c-e523-4723-b373-2b53a2efb91d',name:"Männer 1"},
-        {id:'9b7e3ffe-e5ce-49cb-b308-80fc73df1c2f',name:"Männer 2"},
-        {id:'e5329c79-d1ba-4556-8781-5e2cc1b91ec6',name:"Frauen 1"},
-        {id:'b6dc7416-9e90-4efd-806d-b537ff6afdd6',name:"Frauen 2"},
-        {id:'881875f7-9758-4419-874f-7db80a077acf',name:"Frauen U20"},
-        {id:'881875f7-9758-4419-874f-7db80a077acf',name:"Frauen U18"},
-        {id:'64f0282f-ff81-4b6d-98a4-310e5a150248',name:"Mädchen U16"},
-        {id:'c4fb9672-69bd-407b-9c68-acd58c69192d',name:"Jungs U14"},
-        ]
-
-};
-
-</script>
-
- 
-
-<div class="vapi" data-typ="gesamtspielplan"  data-config="CONFIGNAME" ></div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielplan als Kreuzspielplan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .vapi {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+    <!-- Volleyball API Script -->
+    <script src="https://api.volleyball-bayern.de/jsi/volley.js.php?key=de10422c-af10-4bb2-9713-2b3128a235b4"></script>
+    <script>
+        // Konfiguration für den Kreuzspielplan
+        var CONFIGNAME = {
+            wettbewerbe: [
+                "b33803b9-4470-44fb-9730-eb084ff0dc34",
+                "9e1415b4-76f3-4895-84e9-3a03720c81fa",
+                "5633a4f9-2d94-41ae-8c41-b50a68cbd1cf",
+                "e20038b0-5169-4413-8f79-10785ab8ef7e",
+                "91ad94bf-5fef-43c2-b1b2-c6fc416b1664",
+                "1c313884-b146-4323-84bf-075b0b5650d6",
+                "4c2e6195-1ea3-421c-8bca-8768ca54f4e2",
+                "adb0ec28-21d1-4cf8-a8dc-c50a1d557831"
+            ],
+            teams: [
+                { id: '79006f1c-e523-4723-b373-2b53a2efb91d', name: "Männer 1" },
+                { id: '9b7e3ffe-e5ce-49cb-b308-80fc73df1c2f', name: "Männer 2" },
+                { id: 'e5329c79-d1ba-4556-8781-5e2cc1b91ec6', name: "Frauen 1" },
+                { id: 'b6dc7416-9e90-4efd-806d-b537ff6afdd6', name: "Frauen 2" },
+                { id: '881875f7-9758-4419-874f-7db80a077acf', name: "Frauen U20" },
+                { id: '881875f7-9758-4419-874f-7db80a077acf', name: "Frauen U18" },
+                { id: '64f0282f-ff81-4b6d-98a4-310e5a150248', name: "Mädchen U16" },
+                { id: 'c4fb9672-69bd-407b-9c68-acd58c69192d', name: "Jungs U14" }
+            ]
+        };
+    </script>
+</head>
+<body>
+    <h1>Spielplan - Kreuzspielplan</h1>
+    <p>Hier ist der Kreuzspielplan für alle Spiele des Vereins. Die Daten werden live aus der API geladen:</p>
+    <div class="vapi" data-typ="kreuz" data-config="CONFIGNAME"></div>
+</body>
+</html>
