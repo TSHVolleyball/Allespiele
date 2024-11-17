@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spielplan als Kreuzspielplan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        .vapi {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-        }
-    </style>
-    <!-- Volleyball API Script -->
+    <title>Spielplan - Kreuzspielplan</title>
     <script src="https://api.volleyball-bayern.de/jsi/volley.js.php?key=de10422c-af10-4bb2-9713-2b3128a235b4"></script>
     <script>
-        // Konfiguration für den Kreuzspielplan
         var CONFIGNAME = {
+            allespiele: true, // Zeigt alle Spiele der Saison an
             wettbewerbe: [
                 "b33803b9-4470-44fb-9730-eb084ff0dc34",
                 "9e1415b4-76f3-4895-84e9-3a03720c81fa",
@@ -46,7 +33,6 @@
 </head>
 <body>
     <h1>Spielplan - Kreuzspielplan</h1>
-    <p>Hier ist der Kreuzspielplan für alle Spiele des Vereins. Die Daten werden live aus der API geladen:</p>
     <div class="vapi" data-typ="kreuz" data-config="CONFIGNAME"></div>
 </body>
 </html>
