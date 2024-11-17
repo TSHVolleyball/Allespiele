@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spielplan - Kreuzspielplan</title>
+    <title>Alle Spiele - Kreuzspielplan</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             try {
-                console.log("Skript wird ausgeführt...");
+                console.log("Skript wird geladen...");
+
+                // Konfiguration
                 var CONFIGNAME = {
                     allespiele: true, // Zeigt alle Spiele der Saison an
                     wettbewerbe: [
@@ -32,26 +34,27 @@
                     ]
                 };
 
-                console.log("Konfiguration geladen:", CONFIGNAME);
+                console.log("Konfiguration erfolgreich geladen:", CONFIGNAME);
 
-                // Lade die Volleyball-API ein
-                var script = document.createElement('script');
+                // Volleyball-API einfügen
+                var script = document.createElement("script");
                 script.src = "https://api.volleyball-bayern.de/jsi/volley.js.php?key=de10422c-af10-4bb2-9713-2b3128a235b4";
                 script.onload = function() {
-                    console.log("Volleyball-Skript erfolgreich geladen.");
+                    console.log("Volleyball-Skript erfolgreich geladen!");
                 };
                 script.onerror = function() {
-                    console.error("Fehler beim Laden des Volleyball-Skripts.");
+                    console.error("Fehler beim Laden des Volleyball-Skripts!");
                 };
                 document.body.appendChild(script);
+
             } catch (error) {
-                console.error("Fehler während der Initialisierung:", error);
+                console.error("Ein Fehler ist aufgetreten:", error);
             }
         });
     </script>
 </head>
 <body>
-    <h1>Spielplan - Kreuzspielplan</h1>
+    <h1>Alle Spiele - Kreuzspielplan</h1>
     <div class="vapi" data-typ="kreuz" data-config="CONFIGNAME"></div>
 </body>
 </html>
